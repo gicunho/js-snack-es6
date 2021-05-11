@@ -1,7 +1,11 @@
+/********************
+ ***** SNACK 1 ******  
+********************/
+
 //Creare un array di oggetti, ogni oggetto descriverà una bici da corsa con le seguenti proprietà:
 //nome e peso
 
-const bici = [
+/* const bici = [
     {
         nome: 'Rockrider ST100',
         peso: 7,  
@@ -36,4 +40,66 @@ const {nome, peso} = biciPiùLeggera
 //console.log(biciPiùLeggera);
 console.log(`
 La bici più leggera è la ${nome} con soli ${peso} kg
-`);
+`); */
+
+/********************
+ ***** SNACK 2 ******  
+********************/
+
+//Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà:
+// nome, punti fatti, falli subiti.
+
+let squadre = [
+    {
+    nome: "Juventus",
+    puntiFatti: 0,
+    falliSubiti: 0,
+    },
+    {
+    nome: "Inter",
+    puntiFatti: 0,
+    falliSubiti: 0,
+    },
+    {
+    nome: "Milan",
+    puntiFatti: 0,
+    falliSubiti: 0,
+    },
+    {
+    nome: "Torino",
+    puntiFatti: 0,
+    falliSubiti: 0,
+    },
+    {
+    nome: "Napoli",
+    puntiFatti: 0,
+    falliSubiti: 0,
+    }
+];
+//Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+//Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
+
+var squadreCopia =[];
+for (let i = 0; i < squadre.length; i++) {
+    squadre[i].puntiFatti = genNumCasuali(20, 80);
+    squadre[i].falliSubiti = genNumCasuali(100, 300);
+
+    //Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti 
+    const {nome, falliSubiti} = squadre[i];
+    //console.log(nome);
+    //console.log(falliSubiti);
+    var squadra ={
+        nome,
+        falliSubiti,
+    }
+    //console.log(squadra);
+    squadreCopia.push(squadra)
+}
+//console.log(squadre);
+//e stampiamo tutto in console.
+console.log(squadreCopia);
+
+
+function genNumCasuali(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
