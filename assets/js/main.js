@@ -114,7 +114,8 @@ function genNumCasuali(min, max) {
 //let listaFiltrata = [];
 function filtro(array, a, b) {
     const listaFiltrata = array.filter( (elemento, indice) => {
-        if (indice >= a && b >= indice) {
+        console.log(indice);
+        if (indice >= a - 1 && b - 1 >= indice) {
             return true;
         }
             return false;
