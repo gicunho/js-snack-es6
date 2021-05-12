@@ -103,3 +103,26 @@ console.log(squadreCopia);
 function genNumCasuali(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
+
+/********************
+****** SNACK 3 ******  
+********************/
+
+// Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+// Usiamo i nuovi metodi degli array foreach o filter.
+//let listaFiltrata = [];
+function filtro(array, a, b) {
+    
+    return listaFiltrata
+}
+const listaFiltrata = array.filter( elemento => {
+    if (elemento >= a && b >= elemento) {
+        return true;
+    }
+        return false;
+    })
+console.log(filtro(squadre, 1, 3));
+
+
+
