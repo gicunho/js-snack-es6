@@ -113,15 +113,15 @@ function genNumCasuali(min, max) {
 // Usiamo i nuovi metodi degli array foreach o filter.
 //let listaFiltrata = [];
 function filtro(array, a, b) {
-    
+    const listaFiltrata = array.filter( (elemento, indice) => {
+        if (indice >= a && b >= indice) {
+            return true;
+        }
+            return false;
+        })
     return listaFiltrata
 }
-const listaFiltrata = array.filter( elemento => {
-    if (elemento >= a && b >= elemento) {
-        return true;
-    }
-        return false;
-    })
+
 console.log(filtro(squadre, 1, 3));
 
 
